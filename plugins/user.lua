@@ -33,7 +33,8 @@ return {
   },
   {
   "jinzaizhichi/ChatGPT.nvim",
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    event = "BufRead",
     config = function()
       require("chatgpt").setup({
         asnyc_api_key_cmd = "pass show 2dapi/token", 
