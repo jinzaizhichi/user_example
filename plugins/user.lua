@@ -19,9 +19,7 @@ return {
         vim.keymap.set('i', '<C-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
         vim.keymap.set('i', '<C-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
         vim.keymap.set('i', '<C-x>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-        -- require("codeium").setup({
-        --    api_key = "pass show codeium/api"
-        -- })
+        vim.g.codeium_api_key = vim.fn.system("pass show codeium/api")
       end,
     },
    {'hashivim/vim-terraform',
