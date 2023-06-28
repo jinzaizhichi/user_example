@@ -31,19 +31,20 @@ return {
     --   vim.g.wakatime_api_key = vim.fn.system("pass show wakatime/api")
     -- end,
     },
---   {
---   "jinzaizhichi/ChatGPT.nvim",
---     -- event = "VeryLazy",
---     event = "BufRead",
---     config = function()
---       require("chatgpt").setup({
---       asnyc_api_key_cmd = "pass show 2dapi/token", 
---       })
---     end,
---     dependencies = {
---       "MunifTanjim/nui.nvim",
---       "nvim-lua/plenary.nvim",
---       "nvim-telescope/telescope.nvim"
---     },
--- },
+  {
+    'lianghx-319/ChatGPT.nvim',
+    -- event = "VeryLazy",
+    event = "BufRead",
+    config = function()
+      require("chatgpt").setup({
+      api_key_cmd = "pass show 2dapi/token", 
+      api_host_cmd = "pass show openai/host",
+      })
+    end,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    },
+},
 }
