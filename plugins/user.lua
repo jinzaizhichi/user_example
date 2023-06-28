@@ -29,19 +29,19 @@ return {
     {'wakatime/vim-wakatime',
       event = "VeryLazy"
   },
-  {
-  "jinzaizhichi/ChatGPT.nvim",
-    -- event = "VeryLazy",
-    event = "BufRead",
-    config = function()
-      require("chatgpt").setup({
-        asnyc_api_key_cmd = "pass show 2dapi/token", 
-      })
-    end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    },
-},
+--   {
+--   "jinzaizhichi/ChatGPT.nvim",
+--     -- event = "VeryLazy",
+--     event = "BufRead",
+--     config = function()
+--       require("chatgpt").setup({
+--         asnyc_api_key_cmd = "pass show 2dapi/token", 
+--       })
+--     end,
+--     dependencies = {
+--       "MunifTanjim/nui.nvim",
+--       "nvim-lua/plenary.nvim",
+--       "nvim-telescope/telescope.nvim"
+--     },
+-- },
 }
