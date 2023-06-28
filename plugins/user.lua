@@ -11,8 +11,8 @@ return {
   -- },
 -- Remove the `use` here if you're using folke/lazy.nvim.
   {'Exafunction/codeium.vim',
-      -- event = "VeryLazy",
-      event = "BufRead",
+      event = "VeryLazy",
+      -- event = "BufRead",
       config = function ()
         -- Change '<C-g>' here to any keycode you like.
         vim.keymap.set('i', '<C-h>', function () return vim.fn['codeium#Accept']() end, { expr = true })
@@ -24,18 +24,20 @@ return {
     },
    {'hashivim/vim-terraform',
       event = "BufRead",
-    
     },
     {'wakatime/vim-wakatime',
-      event = "VeryLazy"
-  },
+     event = "VeryLazy",
+    --  config = function()
+    --   vim.g.wakatime_api_key = vim.fn.system("pass show wakatime/api")
+    -- end,
+    },
 --   {
 --   "jinzaizhichi/ChatGPT.nvim",
 --     -- event = "VeryLazy",
 --     event = "BufRead",
 --     config = function()
 --       require("chatgpt").setup({
---         asnyc_api_key_cmd = "pass show 2dapi/token", 
+--       asnyc_api_key_cmd = "pass show 2dapi/token", 
 --       })
 --     end,
 --     dependencies = {
