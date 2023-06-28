@@ -37,8 +37,9 @@ return {
     event = "BufRead",
     config = function()
       require("chatgpt").setup({
-      api_key_cmd = "pass show 2dapi/token", 
+      async_api_key_cmd = "pass show 2dapi/token", 
       api_host_cmd = "pass show openai/host",
+      -- OPENAI_API_HOST= "pass show openai/host",
       })
     end,
     dependencies = {
