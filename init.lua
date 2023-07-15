@@ -69,7 +69,7 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
-   -- vim.g.python3_host_prog = '~/.env/bin/python3',
+   vim.g.python3_host_prog = '~/.env/bin/python3',
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
@@ -77,7 +77,7 @@ return {
     --   },
     --   filename = {
     --     ["Foofile"] = "fooscript",
-    --   },
+    --   },:
     --   pattern = {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
